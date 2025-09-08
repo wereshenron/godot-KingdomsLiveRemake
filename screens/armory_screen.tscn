@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk0lkcemg8avo"]
+
+[ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_p32bb"]
+
+[node name="ArmoryScreen" instance=ExtResource("1_p32bb")]
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = "Armory"

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq4ms3cpcq0vn"]
+
+[ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_xax02"]
+
+[node name="HomeScreen" instance=ExtResource("1_xax02")]

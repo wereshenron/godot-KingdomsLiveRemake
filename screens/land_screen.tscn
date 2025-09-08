@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfm0j75ro7pwi"]
+
+[ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_imrqe"]
+
+[node name="LandScreen" instance=ExtResource("1_imrqe")]
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = "Land"

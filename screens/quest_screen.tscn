@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg1by31x0ixqo"]
+
+[ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_70h7u"]
+
+[node name="QuestScreen" instance=ExtResource("1_70h7u")]
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = "Quests"
