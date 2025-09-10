@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddf4bkdiaij0i"]
 
 [ext_resource type="Script" uid="uid://cyx0tisu64csm" path="res://screen_state_handler.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://c2b20rsphydi8" path="res://icons/circular_progress_bar.png" id="1_272bh"]
+[ext_resource type="Texture2D" uid="uid://b1x4mjy7gcuej" path="res://icons/circular_progress_bar.svg" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://b01cb83e2yeh4" path="res://icons/gold.svg" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dq4ms3cpcq0vn" path="res://screens/home_screen.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://briuk7x8bg8ec" path="res://icons/sword.svg" id="3_7mycd"]
@@ -56,19 +56,18 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = -5.0
-offset_bottom = -5.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 step = 0.0
-value = 75.0
+value = 100.0
 rounded = true
 fill_mode = 4
 nine_patch_stretch = true
 texture_progress = ExtResource("1_272bh")
-tint_progress = Color(0, 0, 0, 1)
 
 [node name="GoldContainer" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
