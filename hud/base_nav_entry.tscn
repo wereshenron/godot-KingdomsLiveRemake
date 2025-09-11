@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn23b2j830lwe"]
+
+[ext_resource type="Texture2D" uid="uid://16fmflo8ir5" path="res://icons/energy.svg" id="1_7db3b"]
+
+[node name="BaseNavEntry" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+
+[node name="EntryHbox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -57.5
+offset_right = 65.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+
+[node name="Logo" type="TextureRect" parent="EntryHbox"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_7db3b")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Stats" type="VBoxContainer" parent="EntryHbox"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Status" type="Label" parent="EntryHbox/Stats"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "3/3"
+
+[node name="Timer" type="Label" parent="EntryHbox/Stats"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.619608, 0.619608, 0.619608, 1)
+theme_override_font_sizes/font_size = 30
+text = "2:00"

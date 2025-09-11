@@ -4,10 +4,10 @@ extends Node
 @onready var player_progression: PlayerProgression = Player.player_progression
 @onready var level = $Level
 @onready var level_progress_bar = $Level/TextureProgressBar
-@onready var gold_label = $GoldContainer/Label
-@onready var health_label = $Health/Label
-@onready var mana_label = $Mana/Label
-@onready var spirit_label = $Spirit/Label
+@onready var gold_label = $Gold/EntryHbox/Stats/Status
+@onready var health_label = $Health/EntryHbox/Stats/Status
+@onready var mana_label = $Mana/EntryHbox/Stats/Status
+@onready var spirit_label = $Spirit/EntryHbox/Stats/Status
 
 var level_format = "Lv. %s"
 var ratio_format = "%d / %d"

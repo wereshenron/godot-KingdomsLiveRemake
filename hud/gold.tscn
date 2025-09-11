@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphon2ohwecwg"]
+
+[ext_resource type="PackedScene" uid="uid://cn23b2j830lwe" path="res://hud/base_nav_entry.tscn" id="1_stfew"]
+[ext_resource type="Texture2D" uid="uid://b01cb83e2yeh4" path="res://icons/gold.svg" id="2_8qq7s"]
+
+[node name="Gold" instance=ExtResource("1_stfew")]
+
+[node name="Logo" parent="EntryHbox" index="0"]
+texture = ExtResource("2_8qq7s")
+flip_h = true
+
+[node name="Status" parent="EntryHbox/Stats" index="0"]
+text = "5"
+horizontal_alignment = 1
+
+[node name="Timer" parent="EntryHbox/Stats" index="1"]
+horizontal_alignment = 1
