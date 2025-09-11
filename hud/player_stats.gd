@@ -4,8 +4,8 @@ extends Node
 @onready var player_progression: PlayerProgression = Player.player_progression
 @onready var level = $Level
 @onready var level_progress_bar = $Level/TextureProgressBar
-@onready var gold_label = $GoldContainer/Label
-@onready var health_label = $Health/Label
+@onready var gold_label = $GoldNavbarEntry/Label
+@onready var health_label = $HealthNavbarEntry/Label
 @onready var mana_label = $Mana/Label
 @onready var spirit_label = $Spirit/Label
 

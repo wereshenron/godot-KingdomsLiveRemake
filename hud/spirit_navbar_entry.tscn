@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0pbiqum41dkh"]
+
+[ext_resource type="PackedScene" uid="uid://c7g4u3lvt5h8" path="res://hud/base_navbar_entry.tscn" id="1_437rf"]
+[ext_resource type="Texture2D" uid="uid://16fmflo8ir5" path="res://icons/energy.svg" id="2_qqnkr"]
+
+[node name="SpiritNavbarEntry" instance=ExtResource("1_437rf")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_qqnkr")
+
+[node name="Label" parent="." index="1"]
+text = "3/3"
