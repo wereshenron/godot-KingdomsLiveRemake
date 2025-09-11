@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://sfpj5ak5kd1d"]
-
-[ext_resource type="PackedScene" uid="uid://c7g4u3lvt5h8" path="res://hud/base_navbar_entry.tscn" id="1_6853n"]
-
-[node name="GoldNavbarEntry" instance=ExtResource("1_6853n")]

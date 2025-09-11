@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://ddf4bkdiaij0i"]
 
-[ext_resource type="Script" uid="uid://cyx0tisu64csm" path="res://screens/screen_state_handler.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cyx0tisu64csm" path="res://screen_state_handler.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://c21qus1kd8ea6" path="res://hud/player_stats.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b1x4mjy7gcuej" path="res://icons/circular_progress_bar.svg" id="1_272bh"]
+[ext_resource type="Texture2D" uid="uid://b01cb83e2yeh4" path="res://icons/gold.svg" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dq4ms3cpcq0vn" path="res://screens/home_screen.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://sfpj5ak5kd1d" path="res://hud/gold_navbar_entry.tscn" id="3_5vw27"]
-[ext_resource type="PackedScene" uid="uid://nyqbgx7fadw2" path="res://hud/health_navbar_entry.tscn" id="4_5vw27"]
-[ext_resource type="PackedScene" uid="uid://bw8penflm8kg3" path="res://hud/mana_navbar_entry.tscn" id="5_5vw27"]
-[ext_resource type="PackedScene" uid="uid://0pbiqum41dkh" path="res://hud/spirit_navbar_entry.tscn" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://briuk7x8bg8ec" path="res://icons/sword.svg" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://3i7uxjhwtvft" path="res://icons/mana.svg" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://16fmflo8ir5" path="res://icons/energy.svg" id="5_5vw27"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 content_margin_top = 15.0
@@ -69,17 +69,77 @@ fill_mode = 4
 nine_patch_stretch = true
 texture_progress = ExtResource("1_272bh")
 
-[node name="GoldNavbarEntry" parent="Layout/TopHUDStyleContainer/TopHUD" instance=ExtResource("3_5vw27")]
+[node name="GoldContainer" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
+size_flags_horizontal = 6
 
-[node name="HealthNavbarEntry" parent="Layout/TopHUDStyleContainer/TopHUD" instance=ExtResource("4_5vw27")]
+[node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/GoldContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_1bvp3")
+expand_mode = 4
+stretch_mode = 4
 
-[node name="ManaNavbarEntry" parent="Layout/TopHUDStyleContainer/TopHUD" instance=ExtResource("5_5vw27")]
+[node name="Label" type="Label" parent="Layout/TopHUDStyleContainer/TopHUD/GoldContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "350"
 
-[node name="SpiritNavbarEntry" parent="Layout/TopHUDStyleContainer/TopHUD" instance=ExtResource("6_kek77")]
+[node name="Health" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Health"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_7mycd")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Layout/TopHUDStyleContainer/TopHUD/Health"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "100/100"
+
+[node name="Mana" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Mana"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_272bh")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Layout/TopHUDStyleContainer/TopHUD/Mana"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "18/18"
+
+[node name="Spirit" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Spirit"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_5vw27")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Layout/TopHUDStyleContainer/TopHUD/Spirit"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "18/18"
 
 [node name="MainScreens" type="Control" parent="Layout"]
 layout_mode = 2
