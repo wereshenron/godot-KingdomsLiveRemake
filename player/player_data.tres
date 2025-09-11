@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=3 format=3 uid="uid://dr4s623cqqm3s"]
+
+[ext_resource type="Script" uid="uid://dqaauejrmkmae" path="res://player/player_data.gd" id="1_cmdx7"]
+[ext_resource type="Resource" uid="uid://cutlum46n47ps" path="res://player/player_progression.tres" id="1_g10lv"]
+
+[resource]
+script = ExtResource("1_cmdx7")
+player_progression = ExtResource("1_g10lv")
+xp = 0
+level = 1
+health = 50
+mana = 18
+spirit = 3
+gold = 0
+metadata/_custom_type_script = "uid://dqaauejrmkmae"

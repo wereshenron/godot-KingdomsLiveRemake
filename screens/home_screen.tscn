@@ -1,5 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq4ms3cpcq0vn"]
+[gd_scene load_steps=3 format=3 uid="uid://dq4ms3cpcq0vn"]
 
 [ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_xax02"]
+[ext_resource type="Script" uid="uid://bxxpwqbvemuy2" path="res://screens/test_button.gd" id="2_vtmbu"]
 
 [node name="HomeScreen" instance=ExtResource("1_xax02")]
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Take 10 Damage"
+script = ExtResource("2_vtmbu")
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="MarginContainer/VBoxContainer/Button" method="_on_button_up"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlayerProgression" load_steps=2 format=3 uid="uid://cutlum46n47ps"]
+
+[ext_resource type="Script" uid="uid://qoptcmrfdlb7" path="res://player/player_progression.gd" id="1_1eqou"]
+
+[resource]
+script = ExtResource("1_1eqou")
+xp_cap = Array[int]([0, 50, 100, 200, 400])
+max_health = Array[int]([0, 50, 60, 75, 100])
+max_mana = Array[int]([0, 18, 20, 24, 30])
+max_spirit = Array[int]([0, 3, 3, 3, 3, 5])
+metadata/_custom_type_script = "uid://qoptcmrfdlb7"

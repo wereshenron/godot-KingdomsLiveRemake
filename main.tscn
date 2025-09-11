@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddf4bkdiaij0i"]
+[gd_scene load_steps=11 format=3 uid="uid://ddf4bkdiaij0i"]
 
 [ext_resource type="Script" uid="uid://cyx0tisu64csm" path="res://screen_state_handler.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://c21qus1kd8ea6" path="res://hud/player_stats.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b1x4mjy7gcuej" path="res://icons/circular_progress_bar.svg" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://b01cb83e2yeh4" path="res://icons/gold.svg" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dq4ms3cpcq0vn" path="res://screens/home_screen.tscn" id="2_h2yge"]
@@ -9,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://16fmflo8ir5" path="res://icons/energy.svg" id="5_5vw27"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+content_margin_top = 15.0
+content_margin_bottom = 15.0
 bg_color = Color(1, 1, 1, 1)
 border_color = Color(0.589096, 0.589096, 0.589095, 1)
 border_blend = true
@@ -40,6 +43,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 [node name="TopHUD" type="HBoxContainer" parent="Layout/TopHUDStyleContainer"]
 custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
+script = ExtResource("1_5vw27")
 
 [node name="Level" type="MenuButton" parent="Layout/TopHUDStyleContainer/TopHUD"]
 custom_minimum_size = Vector2(175, 0)
@@ -53,13 +57,9 @@ expand_icon = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Layout/TopHUDStyleContainer/TopHUD/Level"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 step = 0.0
