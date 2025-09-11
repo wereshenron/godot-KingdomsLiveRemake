@@ -71,7 +71,7 @@ texture_progress = ExtResource("1_272bh")
 
 [node name="GoldContainer" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 
 [node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/GoldContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -89,7 +89,7 @@ text = "350"
 
 [node name="Health" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 
 [node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Health"]
 custom_minimum_size = Vector2(100, 100)
@@ -107,7 +107,7 @@ text = "100/100"
 
 [node name="Mana" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 
 [node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Mana"]
 custom_minimum_size = Vector2(100, 100)
@@ -125,7 +125,7 @@ text = "18/18"
 
 [node name="Spirit" type="HBoxContainer" parent="Layout/TopHUDStyleContainer/TopHUD"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 
 [node name="TextureRect" type="TextureRect" parent="Layout/TopHUDStyleContainer/TopHUD/Spirit"]
 custom_minimum_size = Vector2(100, 100)
