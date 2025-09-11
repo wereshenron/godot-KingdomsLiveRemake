@@ -6,18 +6,21 @@ extends Node
 
 func _ready() -> void:
 	player_data.leveled_up.connect(_on_level_up)
-	
-	# testing 
-	GlobalEvents.test_button_pressed.connect(take_damage)
 
 func add_gold(amount: int) -> void:
 	player_data.gold += amount
 	
 func take_damage(amount: int) -> void:
 	player_data.health -= amount
+	#ResourceSaver.save(player_data) # Testing saving in between runs
 	
 func add_xp(amount: int) -> void:
-	player_data.add_xp(amount)
+	player_data.xp += amount
+	
+func spend_mana(amount: int) -> void:
+	player_data.mana -= amount
 
 func _on_level_up() -> void:
-	print('leveled up! to level %d' % player_data.level)	
+	player_data.health = player_progression.max_health[player_data.level]
+	player_data.mana = player_progression.max_mana[player_data.level]
+	player_data.spirit = player_progression.max_spirit[player_data.level]

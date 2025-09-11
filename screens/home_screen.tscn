@@ -9,7 +9,7 @@
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 100
-text = "Take 10 Damage"
+text = "Add 10 xp"
 script = ExtResource("2_vtmbu")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="MarginContainer/VBoxContainer/Button" method="_on_button_up"]
