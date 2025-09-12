@@ -1,15 +1,46 @@
 [gd_scene load_steps=3 format=3 uid="uid://dq4ms3cpcq0vn"]
 
 [ext_resource type="PackedScene" uid="uid://dvp6q1qfq01ih" path="res://screens/base_screen.tscn" id="1_xax02"]
-[ext_resource type="Script" uid="uid://bxxpwqbvemuy2" path="res://screens/test_button.gd" id="2_vtmbu"]
+[ext_resource type="Script" uid="uid://bxxpwqbvemuy2" path="res://screens/testing_stats.gd" id="2_vtmbu"]
 
 [node name="HomeScreen" instance=ExtResource("1_xax02")]
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+script = ExtResource("2_vtmbu")
+
+[node name="XP" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="0"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 100
-text = "Take 5 damage"
-script = ExtResource("2_vtmbu")
+text = "Add 10 XP"
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="MarginContainer/VBoxContainer/Button" method="_on_button_up"]
+[node name="Health" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Take 2 Damage"
+
+[node name="Mana" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Spend 3 Mana"
+
+[node name="Spirit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Spend 1 Spirit"
+
+[node name="Gold" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="4"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Add 20 Gold"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/XP" to="MarginContainer/VBoxContainer/VBoxContainer" method="_on_xp_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/Health" to="MarginContainer/VBoxContainer/VBoxContainer" method="_on_health_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/Mana" to="MarginContainer/VBoxContainer/VBoxContainer" method="_on_mana_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/Spirit" to="MarginContainer/VBoxContainer/VBoxContainer" method="_on_spirit_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/Gold" to="MarginContainer/VBoxContainer/VBoxContainer" method="_on_gold_button_up"]

@@ -5,16 +5,20 @@ extends Control
 @onready var timer_label = $EntryHbox/Stats/Timer
 @onready var status = $EntryHbox/Stats/Status
 
-@export var cooldown_duration: int
+@export var cooldown_duration: float # In seconds
+@export var stat: StatEnum.Stat
 
 func _ready() -> void:
+	match stat:
+		StatEnum.Stat.HEALTH:
+			Player.lost_health.connect(_on_stat_lost)
 	timer.timeout.connect(cooldown_finished)
 
 func _process(delta: float) -> void:
 	if timer.is_stopped():
-		timer_label = ""
+		timer_label.text = ""
 	else:
-		timer_label = format_time(timer.time_left)
+		timer_label.text = format_time(timer.time_left)
 
 func start_cooldown() -> void:
 	timer.wait_time = cooldown_duration
@@ -27,6 +31,17 @@ func format_time(seconds: float) -> String:
 	
 func stop_timer() -> void:
 	timer.stop()
-	
+
 func cooldown_finished() -> void:
-	pass # Define in child classes
+	Player.change_stat(stat, 1)
+	
+	var current_state: Array[int] = Player.get_stat(stat)
+	var current = current_state.front()
+	var max = current_state.back()
+	
+	if current == max:
+		stop_timer()
+	
+func _on_stat_lost() -> void:
+	if timer.is_stopped():
+		start_cooldown()

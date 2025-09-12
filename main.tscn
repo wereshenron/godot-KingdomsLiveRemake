@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://c21qus1kd8ea6" path="res://hud/player_stats.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b1x4mjy7gcuej" path="res://icons/circular_progress_bar.svg" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://dq4ms3cpcq0vn" path="res://screens/home_screen.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dphon2ohwecwg" path="res://hud/gold.tscn" id="3_5vw27"]
-[ext_resource type="PackedScene" uid="uid://bfddc7w8jrbry" path="res://hud/health.tscn" id="4_5vw27"]
-[ext_resource type="PackedScene" uid="uid://dltitmj6lltu0" path="res://hud/mana.tscn" id="5_kek77"]
-[ext_resource type="PackedScene" uid="uid://dwb7t5irdavek" path="res://hud/spirit.tscn" id="6_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dphon2ohwecwg" path="res://hud/gold/gold.tscn" id="3_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bfddc7w8jrbry" path="res://hud/health/health.tscn" id="4_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dltitmj6lltu0" path="res://hud/mana/mana.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://dwb7t5irdavek" path="res://hud/spirit/spirit.tscn" id="6_4c57u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 content_margin_top = 15.0

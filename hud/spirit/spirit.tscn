@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwb7t5irdavek"]
+
+[ext_resource type="PackedScene" uid="uid://cn23b2j830lwe" path="res://hud/base_nav_entry.tscn" id="1_4hgvn"]
+[ext_resource type="Script" uid="uid://cbyllveto0q07" path="res://hud/spirit/spirit_timer.gd" id="2_xryuj"]
+
+[node name="Spirit" instance=ExtResource("1_4hgvn")]
+script = ExtResource("2_xryuj")
+stat = 2
